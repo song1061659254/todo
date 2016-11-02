@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width"/>
+		<!-- Add to homescrern for Safari on IOS-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="todos">
+		<link rel="apple-touch-icon" href="img/logo.jpg">
+		<!-- Add to homescrern for Safari on Android-->
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="theme-color" content="#2F3BA2">
+		<meta name="application-name" content="todos">
+		<link rel="icon" sizes="192*192" href="img/logo.jpg">
+		<title>爱帮公交</title>
+		<link rel="stylesheet" href="css/aibang.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/aibang.js"></script>
+	</head>
+	<style>
+
+	</style>
+	<body>
+		<!--header-->
+		<div id="header">
+			<div class="title">
+				<h2>爱帮公交-</h2>
+				<select name="city" id="city">
+					<option value="">太原</option>	
+					<option value="">榆次</option>	
+				</select>
+			</div>
+			<div class="sousuo">
+				<input type="text"  value=""/>
+				<button class="add">查询</button>
+			</div>
+		</div>
+		
+		<!---->
+		<div id="tuijian">
+			<div class="xian">
+				<i class="iconfont">&#xe60c;</i><span>附近线路</span>
+			</div>
+			<div class="shou">
+				<i class="iconfont">&#xe645;</i><span>收藏线路</span>
+			</div>
+		</div>
+		<!--clear-->
+		<div id="clear">
+			<a href="javascript:;">清空</a>
+		</div>
+		<!--main-->
+		<ul id="main">
+			<!--<li>
+				<div class="zhong">
+					<i class="iconfont">&#xe63a;</i>
+				</div>
+				<div class="content"></div>
+			</li>-->
+		</ul>
+		<!--footer-->
+		<div id="foot">
+			<div class="huan">
+				<i class="iconfont">&#xe602;</i>
+				<span>换乘</span>
+			</div>
+			<div class="xianlu">
+				<i class="iconfont">&#xe61b;</i>
+				<span>线路</span>
+			</div>
+			<div class="zhan">
+				<i class="iconfont">&#xe84f;</i>
+				<span>站点</span>
+			</div>
+			<div class="wo">
+				<i class="iconfont">&#xe60f;</i>
+				<span>我</span>
+			</div>
+		</div>
+	</body>
+</html>
