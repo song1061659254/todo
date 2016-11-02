@@ -13,13 +13,11 @@ $(function(){
         if(n-pos>=50){
             todos[$(this).index()].state=1;
             $(this).addClass("done");
-            
             localStorage.todos=JSON.stringify(todos);
         }
         if(n-pos<=-50){
             todos[$(this).index()].state=0;
             $(this).removeClass("done");
-            
             localStorage.todos=JSON.stringify(todos);
         }
     });
@@ -28,7 +26,7 @@ $(function(){
     var todos=[];
     if(localStorage.todos){
         todos=JSON.parse(localStorage.todos);
-//      ul.empty()
+
         for(var i=0;i<todos.length;i++){
             var c=(todos[i].state)?"done":"";
             $("<li class='" +c+"'><div class='zhong'><i class='iconfont'>&#xe63a;</i></div><div class='content'>"+todos[i].name+"</div>").appendTo(ul);
@@ -50,5 +48,38 @@ $(function(){
         input.val("");
     })
 
+// 清除已完成
+    var clean=$("#clear .clean");
+    clean.on("touchend",function(){
+        ul.find(".done").each(function(i){
+            $(this).delay(i*80).queue(function(){
+                $(this).addClass("run").dequeue();
+            }).delay(800).queue(function(){
+                $(this).remove().dequeue();
+            })
+        })
+        var newarr=[];
+        for(var i=0;i<todos.length;i++){
+            if(todos[i].state===0){
+                newarr.push(todos[i]);
+            }
+        }
+    })
+// 清空
+     var quan=$("#clear .quan");
+     quan.on("touchend",function(){
+        ul.find("li").remove();
+     })
     
+    // foot
+    var foot=$("#foot");
+
+    foot.on("click","div",function(){
+        var index=$(this).index();
+        // console.log(index)
+        foot.find("div").removeClass("active");
+        foot.find("div").eq(index).addClass("active");
+    })
+
+
 })
