@@ -29,7 +29,7 @@ $(function(){
 
         for(var i=0;i<todos.length;i++){
             var c=(todos[i].state)?"done":"";
-            $("<li class='" +c+"'><div class='zhong'><i class='iconfont'>&#xe63a;</i></div><div class='content'>"+todos[i].name+"</div>").appendTo(ul);
+            $("<li class=" +c+"><div class='zhong'><i class='iconfont'>&#xe63a;</i></div><div class='content'>"+todos[i].name+"</div></li>").appendTo(ul);
         }
     }
     
@@ -44,7 +44,7 @@ $(function(){
         }
         todos.push(todo);
         localStorage.todos=JSON.stringify(todos);
-        $("<li><div class='zhong'><i class='iconfont'>&#xe63a;</i></div><div class='content'>"+v+"</div>").appendTo(ul);
+        $("<li><div class='zhong'><i class='iconfont'>&#xe63a;</i></div><div class='content'>"+v+"</div></li>").appendTo(ul);
         input.val("");
     })
 

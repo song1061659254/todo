@@ -21,6 +21,7 @@ $desin-size:750px;
     @media screen and (min-width:#{$w}){
         html{
             width:$w;
+            position: relative;
             font-size: 100px*$w/$desin-size;
         }
     }
